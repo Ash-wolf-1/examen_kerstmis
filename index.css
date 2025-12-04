@@ -1,3 +1,4 @@
+/* hero */
 .hero {
     height: 80vh;
     display: flex;
@@ -5,4 +6,91 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 1rem;
+
+    background: radial-gradient(
+        var(--primary-color-blue) 0%,
+        var(--primary-color-black) 40%,
+        var(--background-color-black) 100%
+    );
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.guides-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color-black);
+    background-color: var(--primary-color-blue);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.guides-btn:hover {
+    background-color: var(--secondary-color-black);
+    color: var(--primary-color-blue);
+}
+
+/* cards */
+.info-cards {
+    padding: 4rem 2rem;
+    color: var(--primary-color-white);
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.card {
+    background: var(--primary-color-black);
+    border: 1px solid var(--primary-color-black);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color-blue);
+}
+
+.card img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* mobile cards */
+@media (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card img {
+        height: auto;
+    }
 }
