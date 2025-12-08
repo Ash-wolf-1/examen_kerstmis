@@ -1,135 +1,105 @@
-/* basisstyling */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #1c1c1c;
-    color: #f1f1f1;
+/* page intro */
+.guides-intro {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    border-radius: 10px;
 }
 
-a {
+.guides-intro h1 {
+    font-size: 2rem;
     color: var(--primary-color-blue);
+    margin-bottom: 1rem;
+}
+
+.guides-intro p {
+    font-size: 1.1rem;
+    color: var(--primary-color-white);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .guides-intro {
+        padding: 2rem 1rem;
+    }
+
+    .guides-intro h1 {
+        font-size: 1.6rem;
+    }
+
+    .guides-intro p {
+        font-size: 1rem;
+    }
+}
+
+/* guide sections */
+.guide-section {
+    background: var(--secondary-color-black);
+    padding: 3rem 2rem;
+    color: var(--primary-color-white);
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    border-radius: 10px;
+}
+
+.guide-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color-blue);
+    margin-bottom: 1rem;
+}
+
+.guide-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.guide-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.guide-section li {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
     text-decoration: none;
 }
 
-/* header */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: var(--primary-color-black);
-    color: white;
-}
-
-.logo {
-    padding: 2%;
-    font-size: 1.6rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.logo span {
-    color: white;
-}
-
-/* nav algemeen */
-.navigation {
-    display: flex;
-    justify-content: center;
-}
-
-.navigation ul {
-    list-style: none;
-    display: flex;
-    gap: 1.2rem;
-    margin: 0;
-    padding: 0;
-}
-
-/* BUTTON-STYLING VOOR ALLE LINKS */
-.navigation a {
-    color: var(--primary-color-blue);
-    font-weight: 500;
-    padding: 0.5rem 0.9rem;
-    border: 2px solid var(--primary-color-blue);
+.section-img {
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
-    transition: 0.2s ease;
-    display: inline-block;
 }
 
-.navigation a:hover {
-    background: var(--primary-color-blue);
-    color: var(--primary-color-black);
+.guide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
-/* ------ MOBILE  (2×2 layout, kleinere knoppen) ------ */
 @media (max-width: 768px) {
-
-    .site-header {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 1rem;
+    .guide-section {
+        padding: 2rem 1rem;
     }
 
-    .navigation ul {
-        flex-wrap: wrap;              /* belangrijke stap */
-        justify-content: center;
-        gap: 0.8rem;
+    .guide-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .guide-section p,
+    .guide-section li {
+        font-size: 1rem;
+    }
+
+    .guide-img {
         width: 100%;
+        height: 100%;
     }
-
-    .navigation ul li {
-        flex: 1 1 calc(50% - 1rem);   /* zorgt voor 2 per rij */
-        text-align: center;
-    }
-
-    .navigation a {
-        width: 50%;                  /* knoppen worden even breed */
-        padding: 0.6rem 0.8rem;
-        font-size: 0.95rem;
-        border-radius: 8px;
-        background: var(--secondary-color-black);
-    }
-
-    .navigation a:hover {
-        background: var(--primary-color-blue);
-        color: var(--primary-color-black);
-    }
-}
-
-/* footer */
-.site-footer {
-    background: var(--primary-color-black);
-    color: white;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0.25%;
-}
-
-li:hover {
-    text-decoration: underline;
-}
-
-.footer-content h3,
-.footer-content h4 {
-    margin-top: 0;
-    color: var(--primary-color-blue);
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 2rem;
-    opacity: 0.7;
-    font-size: 0.9rem;
 }

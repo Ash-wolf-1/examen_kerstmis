@@ -20,8 +20,8 @@
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="guides.html">Guides</a></li>
+                <li><a href="news.html">Nieuws</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -34,20 +34,83 @@
         </section>
         
         <section class="info-cards">
-            <div class="card">
-                <img src="img/The_Game_Awards_2025_poster.jpg" alt="The Game Awards 2025 poster">
-                <h3>Nieuws</h3>
-                <p>Ontdek de laatste trends en updates in de gamingwereld.</p>
-            </div>
-            <div class="card">
-                <img src="img/1122_GuideAssets_ThePathtoStardom_heroimage.png" alt="">
-                <h3>Reviews</h3>
-                <p>Eerlijke en duidelijke meningen over de nieuwste games.</p>
-            </div>
-            <div class="card">
+            <a href="guides.html" class="card">
                 <img src="img/40-platinum.png" alt="">
                 <h3>Guides</h3>
-                <p>Word beter in je favoriete games met handige tips & tricks.</p>
+                <p>Word beter in je favoriete games met handige tips & tricks</p>
+            </a>
+
+            <a href="news.html" class="card">
+                <img src="img/The_Game_Awards_2025_poster.jpg" alt="The Game Awards 2025 poster">
+                <h3>Nieuws</h3>
+                <p>Ontdek de laatste trends en updates in de gamingwereld</p>
+            </a>
+
+            <a href="reviews.html" class="card">
+                <img src="img/1122_GuideAssets_ThePathtoStardom_heroimage.png" alt="">
+                <h3>Reviews</h3>
+                <p>Eerlijke en duidelijke meningen over de nieuwste games</p>
+            </a>
+        </section>
+
+        <section class="featured">
+            <h2>Aanbevolen games</h2>
+            <div class="game-grid">
+                <div class="game-card">
+                        <div class="game-header">
+                            <img src="img/BO7-SEASON-01-ANNOUNCEMENT-TOUT.jpg" alt="">
+                            <h4>Call of Duty: Warzone</h4>
+                            <p>Black Ops 7 seizoen 1: nu in Warzone</p>
+                        </div>
+
+                    <div class="game-extra">
+                        <a href="https://www.callofduty.com/patchnotes/2025/12/call-of-duty-bo7-warzone-season-01-patch-notes" target="_blank">
+                            Officiële Warzone blog →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <img src="img/LostRecords_featured.jpg" alt="">
+                        <h4>Lost Records: Bloom & Rage</h4>
+                        <p>Emotioneel avontuur met een onvergetelijk verhaal</p>
+                    </div>                    
+
+                    <div class="game-extra">
+                        <a href="https://dont-nod.com/en/games/lost-records-bloom-and-rage/" target="_blank" class="game-link">
+                            Meer over Lost Records →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <img src="img/Roblox_featured.jpg" alt="Roblox logo over cover afbeeldingen van games">
+                        <h4>Roblox Picks</h4>
+                        <p>Onze favoriete solo-friendly games</p>
+                    </div>
+
+                    <div class="game-extra">
+                        <a href="guides.html#roblox" class="game-link">
+                            Bekijk onze Roblox picks →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-header">
+                        <img src="img/RE8_featured.jpg" alt="">
+                        <h4>Resident Evil Village</h4>
+                        <p>Intense horror en verhaal die je op het puntje van je stoel houden</p>
+                    </div>
+
+                    <div class="game-extra">
+                        <a href="https://www.residentevil.com/village/" target="_blank" class="game-link">
+                            Officiële RE Village info →
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -64,8 +127,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="guides.html">Guides</a></li>
+                    <li><a href="news.html">Nieuws</a></li>
                     <li><a href="reviews.html">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
     
@@ -78,5 +141,14 @@
     
         <p class="footer-bottom">© 2025 GamingCore</p>
     </footer>
+
+    <script>
+        document.querySelectorAll(".game-card").forEach(card => {
+            card.addEventListener("click", () => {
+                card.classList.toggle("active");
+            });
+        });
+    </script>
+        
 </body>
 </html>
